@@ -54,7 +54,16 @@
    }
    .row {
     border-style: groove;
+    padding: 30px;
    }
-.results {
+
+.Results {
     text-align: center;
+    color: rgb(29, 165, 81);
+
 }
+.float-left {
+    
+    margin-right: 100px
+}
+
