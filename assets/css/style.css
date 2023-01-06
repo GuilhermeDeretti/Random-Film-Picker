@@ -1,8 +1,38 @@
-* {
-    box-sizing: border-box;
+body {
+    margin-bottom: 20px;
+    background-color:whitesmoke;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    
 }
 
 
+ /* Jumbotron */
+ .jumbotron {
+    background-image: url(../images/world-map2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: calc(100vh - 25px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* margin-bottom: 20px; */
+  }
+
+
+
+
+  .destination{
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    /* margin-bottom: 20px; */
+    background-color:steelblue;
+    color: white;
+    text-align: center;
+    border-bottom: 5px solid steelblue;
+
+  }
 
 /* Modal CSS Starts, copied from W3 School */
 /* https://www.w3schools.com/howto/howto_css_modals.asp */
@@ -47,7 +77,56 @@
 
   /* Modal CSS ends */
 
+.container {
+    background-color:whitesmoke;
+    border-radius: 10px; 
+    border-color: steelblue;
+    border-style: double;
 
+}
+.Search {
+    text-align: center;
+    color: steelblue;
+}
+
+
+  .card-group {
+    padding: 10px;
+}
+
+
+.card {
+    /* border-color: rgb(122, 14, 122); */
+    background-color: whitesmoke;
+    padding-right: 10px;
+    border: hidden !important;
+}
+
+.card-body {
+    background-color:whitesmoke;
+    border-radius: 10px; 
+    border-color: steelblue;
+    border-style: dotted;
+    color: steelblue;
+    
+}
+
+.btn-secondary {
+    background-color: steelblue !important;
+    border-radius: 28px;
+
+}
+
+.btn-secondary:hover{
+    color: black;
+    background-color: rgb(119, 198, 227) !important;
+    border-color: rgb(119, 198, 227) !important;
+
+}
+
+#card-group {
+    background-color: rgb(34, 34, 145) !important;
+}
   .card-title{
     text-align: center;
     align-items: center;
@@ -59,11 +138,40 @@
 
 .Results {
     text-align: center;
-    color: rgb(29, 165, 81);
-
+    color: steelblue;
+    padding: 0px;
 }
 .float-left {
     
     margin-right: 100px
+}
+
+.row {
+    border-style: hidden;
+}
+
+.container1 {
+    background-color:whitesmoke;
+    border-radius: 10px; 
+    border-color: steelblue;
+    border-style: double;
+    /* box-shadow: steelblue; */
+    
+}
+.footer {
+    /* margin-top: 10px; */
+    width: 100%;
+    padding: 0px;
+    /* margin-bottom: 20px; */
+    background-color:steelblue;
+    color: white;
+    text-align: center;
+    border-bottom: 5px solid steelblue;
+    
+}
+
+.cardContainer a  {
+    color: white !important;
+
 }
 
