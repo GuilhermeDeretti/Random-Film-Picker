@@ -49,7 +49,7 @@ footer {
   transform: scale(1.2);    
   animation: play 4s steps(12) infinite;
   /* transform: translate(15%); */
-  background-image: url('/images/popcorn.png');
+  background-image: url('../images/popcorn.png');
 }
 
 @keyframes play {
