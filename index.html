@@ -1,172 +1,94 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <head>
+    <title>Random Film Picker</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Random Destination Picker</title>
-</head>
-<body>
-  <header class="container-fluid text-center p-2 destination">
-    <h1>Random Destination Picker</h1>
-  </header>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <body>
 
+<div class="jumbotron">
+  <h1 class="jumboTitle">Random Film Picker</h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt atque, unde a doloribus sapiente cumque odio? Recusandae eius esse voluptatum repudiandae amet adipisci eveniet tempora optio. Porro veritatis beatae quidem.</p>
+  </p>
+</div>
 
-  <div class="jumbotron jumbotron-fluid">
-
-
+<div class="container mainUi">
+  <div class="row">
+    <div class="col">
+<button id="" class="btn btn-primary displayQuotes" href="#" >Display Quote</button>
+</div>
+</div>
 </div>
 
 <div class="container">
-
-  <div class="Search"> 
-    <h1>Start your Search</h1>
-      <h5> Press one of the buttons below to receive random countries to visit</h5>
-  </div>
-  <div class="card-group">
-  <div class="card">
-    <!-- <img class="card-img-top" data-src="holder.js/100x180/" alt="Card image cap"> -->
-    <div class="card-body  btn-secondary">
-      <h4 class="card-title">North America</h4>
-      <!-- <p class="card-text">Text</p> -->
-    </div>
-  </div>
-  <div class="card">
-    <!-- <img class="card-img-top" data-src="holder.js/100x180/" alt="Card image cap"> -->
-    <div class="card-body btn-secondary">
-      <h4 class="card-title">South America</h4>
-      <!-- <p class="card-text">Text</p> -->
-    </div>
-  </div>
-
-  <div class="card">
-    <!-- <img class="card-img-top" data-src="holder.js/100x180/" alt="Card image cap"> -->
-    <div class="card-body btn-secondary">
-      <h4 class="card-title">Europe</h4>
-      <!-- <p class="card-text">Text</p> -->
-    </div>
-  </div>
-  </div>
-<!-- </div> -->
-
-<div class="card-group">
-  <div class="card">
-    <!-- <img class="card-img-top" data-src="holder.js/100x180/" alt="Card image cap"> -->
-    <div class="card-body btn-secondary">
-      <h4 class="card-title">Africa</h4>
-      <!-- <p class="card-text">Text</p> -->
-    </div>
-  </div>
-  <div class="card">
-    <!-- <img class="card-img-top" data-src="holder.js/100x180/" alt="Card image cap"> -->
-    <div class="card-body btn-secondary">
-      <h4 class="card-title">Asia</h4>
-      <!-- <p class="card-text">Text</p> -->
-    </div>
-  </div>
-
-  <div class="card">
-    <!-- <img class="card-img-top" data-src="holder.js/100x180/" alt="Card image cap"> -->
-    <div class="card-body btn-secondary">
-      <h4 class="card-title">Australia</h4>
-      <!-- <p class="card-text">Text</p> -->
-    </div>
-  </div>
-  </div>
-</div>
-</div>
-<br>
-<br>
-
-<div class="container1">
-
-  <div class="Results">
-    <h1>Results</h1>
-  </div>
-
-
   <div class="row">
-    <div class="col-md-1-12">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title"></h5>
-          <p class="card-text">
-
-            <img src="assets/images/demo.png" alt="city picture" class="float-left" />
-            <h5>RandomCity Name coming from JS script</h5>
-            The objective of this project is to generate a city or country destination at random using simple user inputs, such as [TO BE DEFINED].
-            Based on user input, using two seperate APIs [RoadGoat](https://www.roadgoat.com/business/cities-api) and [Meal](https://www.themealdb.com/api.php) , 
-            background information will be generated on random country and its national dish using Ajax. And possible add a traditional music based on that location, given we still have enough time left. 
-          </p>
-
-          <!-- Trigger/Open The Modal -->
-          <button id="myBtn">More Information about the city</button>
-
-        <!-- The Modal -->
-        <div id="myModal" class="modal">
-
-        <!-- Modal content -->
-          <div class="modal-content">
-         <span class="close">&times;</span>
-          <p>More Information</p>
-        </div>
-
-</div>
-
-        </div>
-      </div>
-    </div>
-   
+    <div class="col">
+<!-- First Quote -->
+<div class="card">
+  <div class="card-header">
+    Random Film Quote 
+  </div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0 synopsisFirst">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+      <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+    </blockquote>
   </div>
 </div>
-
-
-
-  <!-- Moment.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
-  <!-- jQuery -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="./assets/js/script.js"></script>  
-  
-  
-  
-<div class="footer">
-    <p>Made with 🤍 by</p>
-    <h5></h5>
-
-<div class="row">
-    <div class="cardContainer col-lg-3 col-md-3 col-sm-12">
-
-          <a href="https://guilhermederetti.github.io/Portfolio/">Guilherme Deretti</a>
-    
-      </div>
-      
-   
-      <div class="cardContainer col-lg-3 col-md-3 col-sm-12">
-        
-        <a href="https://reinkaoss.github.io/Bootstrap-Portfolio/">Victor Biscio</a>
-        
-      </div>
-
-      <div class="cardContainer col-lg-3 col-md-3 col-sm-12">
-      
-          <a href="https://uklivewire.github.io/Bootstrap-Portfolio/">Ricky Bryans</a>
-      
-      </div>
-
-      <div class="cardContainer col-lg-3 col-md-3 col-sm-12">
-      
-          <a href="https://najma53.github.io/bootstrap-portfolio/">Najma Alibhai</a>
-        
-      </div>
-    
-    </div>
+</div>
+<div class="col">
+<!-- Second quote -->
+<div class="card">
+  <div class="card-header">
+    Random Film Quote 2
   </div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0 synopsisSecond ">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+      <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+    </blockquote>
   </div>
-  
-</body>
+</div>
+</div>
+<!-- Third Quote -->
+<div class="col">
+<div class="card">
+  <div class="card-header">
+    Random Film Quote 3
+  </div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0 synopsisThird">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+      <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+    </blockquote>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-center text-white">
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2023 Copyright:
+    <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+    <script src="/assets/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
 </html>
