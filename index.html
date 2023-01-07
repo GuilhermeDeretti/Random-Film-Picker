@@ -18,8 +18,7 @@
 
   <div class="jumbotron">
     <h1 class="jumboTitle">Random Film Picker</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt atque, unde a doloribus sapiente cumque odio?
-      Recusandae eius esse voluptatum repudiandae amet adipisci eveniet tempora optio. Porro veritatis beatae quidem.
+    <p class="descriptionText">[Add a brief description of the application]
     </p>
     </p>
   </div>
@@ -28,7 +27,8 @@
     <div class="row">
       <div class="col">
         <button id="" class="btn btn-primary synopsisDisplay" href="#">Display Synopsis</button>
-        <img class="loadingImage hide" src="./assets/images/popcorn.png" alt="">
+        <div class="loading">
+        <img class="loadingImage hide" src="/assets/images/popcorn.png" alt=""></div>
       </div>
     </div>
   </div>
@@ -40,22 +40,22 @@
     </div>
   </div>
 
-
   <!-- Modal -->
   <div class="modal fade" id="modelId" role="dialog">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title">Modal title</h5>
-          <span class="close">&times;</span>
+          <span data-dismiss="modal" class="close">x</span>
           </button>
         </div>
         <div class="modal-body">
-          <div class="container-fluid">
+          <div class="container-fluid modalContainer">
             <img id="modal-image" alt="movie image">
             <p id="modal-rating"></p>
-            <p id="modal-release"></p>
+            <!-- <p id="modal-release"></p> -->
             <p id="modal-genre"></p>
+            <h4>Where to Watch:</h4>
           </div>
         </div>
         <div class="modal-footer">
@@ -70,8 +70,9 @@
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
       © 2023 Copyright:
-      <a class="text-white" href="https://mdbootstrap.com/">Our Project Here</a>
+      <a class="text-white" href="https://github.com/GuilhermeDeretti/Random-Destination-Picker">The Musketeers</a>
     </div>
+    <a target="_blank" href="https://github.com/GuilhermeDeretti/Random-Destination-Picker"> <img class="github" src="/assets/images/github.png" alt="gitHub_icon"></a>
     <!-- Copyright -->
   </footer>
   <!-- Optional JavaScript -->
