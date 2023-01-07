@@ -1,11 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300;1,400&display=swap'); 
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
 /* Header */
 .jumboTitle {
   display: flex;
   justify-content: center;
-}
-
-* {
-
 }
 
 /* Landing page */
@@ -25,4 +27,8 @@ footer {
     bottom: 0;
     width: 100%;
     height: 5.5rem;
+}
+
+.card, .card-header {
+  border-radius: 30px;
 }
