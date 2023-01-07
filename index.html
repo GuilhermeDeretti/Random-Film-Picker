@@ -1,125 +1,90 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>Random Film Picker</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  </head>
-  <body>
+<head>
+  <title>Random Film Picker</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<div class="jumbotron">
-  <h1 class="jumboTitle">Random Film Picker</h1>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt atque, unde a doloribus sapiente cumque odio? Recusandae eius esse voluptatum repudiandae amet adipisci eveniet tempora optio. Porro veritatis beatae quidem.</p>
-  </p>
-</div>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
 
-<div class="container mainUi">
-  <div class="row">
-    <div class="col">
-<button id="" class="btn btn-primary displayQuotes" href="#" >Display Quote</button>
-  <img class="loadingImage hide" src="/images/popcorn.png" alt="">
-</div>
-</div>
-</div>
+<body>
 
-<div class="container quotesContainer hide">
-  <div class="row">
-    <div class="col">
-<!-- First Quote -->
-<div class="card">
-  <div class="card-header">
-    <h4>Random Film Quote </h4>
+  <div class="jumbotron">
+    <h1 class="jumboTitle">Random Film Picker</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt atque, unde a doloribus sapiente cumque odio?
+      Recusandae eius esse voluptatum repudiandae amet adipisci eveniet tempora optio. Porro veritatis beatae quidem.
+    </p>
+    </p>
   </div>
-  <div class="card-body">
-    <blockquote class="blockquote mb-0 synopsisFirst">
-      <p class="quote"></p>
-    </blockquote>
-  </div>
-</div>
-</div>
-<div class="col">
-<!-- Second quote -->
-<div class="card">
-  <div class="card-header">
-    <h4>Random Film Quote 2</h4>
-  </div>
-  <div class="card-body">
-    <blockquote class="blockquote mb-0 synopsisSecond ">
-      <p class="quote"></p>
-    </blockquote>
-  </div>
-</div>
-</div>
-<!-- Third Quote -->
-<div class="col">
-<div class="card">
-  <div class="card-header">
-   <h4>Random Film Quote 3</h4>
-  </div>
-  <div class="card-body">
-    <blockquote class="blockquote mb-0 synopsisThird">
-      <p class="quote"></p>
-    </blockquote>
-  </div>
-</div>
-</div>
-</div>
-</div>
 
-
-<!-- Modal -->
-<div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title">Modal title</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-          </div>
-      <div class="modal-body">
-        <div class="container-fluid">
-          Add rows here
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save</button>
+  <div class="container mainUi">
+    <div class="row">
+      <div class="col">
+        <button id="" class="btn btn-primary synopsisDisplay" href="#">Display Synopsis</button>
+        <img class="loadingImage hide" src="./assets/images/popcorn.png" alt="">
       </div>
     </div>
   </div>
-</div>
 
-<script>
-  $('#exampleModal').on('show.bs.modal', event => {
-    var button = $(event.relatedTarget);
-    var modal = $(this);
-    // Use above variables to manipulate the DOM
-    
-  });
-</script>
-
-<!-- Footer -->
-<footer class="bg-dark text-center text-white">
-  <!-- Copyright -->
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-    © 2023 Copyright:
-    <a class="text-white" href="https://mdbootstrap.com/">Our Project Here</a>
+  <div class="container synopsisContainer hide">
+    <div class="row">
+      <div class="col" id="synopsis">        
+      </div>
+    </div>
   </div>
-  <!-- Copyright -->
-</footer>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    
-    <script src="/assets/js/script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="modelId" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Modal title</h5>
+          <span class="close">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <img id="modal-image" alt="movie image">
+            <p id="modal-rating"></p>
+            <p id="modal-release"></p>
+            <p id="modal-genre"></p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-center text-white">
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2023 Copyright:
+      <a class="text-white" href="https://mdbootstrap.com/">Our Project Here</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+  <script src="./assets/js/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
