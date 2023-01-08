@@ -5,15 +5,29 @@
 }
 
 /* Header */
+.jumbotron {
+  background-image: url(../images/movie2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+
 .jumboTitle {
   display: flex;
   justify-content: center;
   font-size: 45px;
   font-weight: bolder;
+  color: silver;
 }
 
 .descriptionText {
 text-align: center;
+color: silver;
 }
 
 /* Landing page */
@@ -31,11 +45,29 @@ text-align: center;
   align-items: center;
 }
 
-footer {
+.btn-primary {
+  background-color:transparent !important;
+  float:left ;
+  color: black;
+  border-color: black;
+
+}
+
+.btn-primary:hover{
+  color: black !important;
+  background-color: seashell !important;
+  
+}
+
+.footer {
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 100px;
+}
+
+.cardContainer a {
+  color:silver !important;
 }
 
 .github {
@@ -72,6 +104,7 @@ footer {
   .loading > img {
     margin-left: 20px;
   }
+}
 
 .hide {
   display: none !important;
@@ -110,3 +143,4 @@ font-weight: bolder;
   align-items: center;
   flex-direction: column;
 }
+
