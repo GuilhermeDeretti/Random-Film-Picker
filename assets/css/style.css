@@ -144,3 +144,13 @@ font-weight: bolder;
   flex-direction: column;
 }
 
+.card-header{
+  background-color: rgb(51, 52, 53);
+  color: silver;
+ 
+}
+
+.card :hover{
+  background-color: silver;
+  color: black;
+}

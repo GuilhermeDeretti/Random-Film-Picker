@@ -1,6 +1,6 @@
 # Random Film Picker
 
-Random Film Picker is an app that solves the problem of boredom and conflict among friends and family on choice of movie. It randomly picks up a movie .....
+Random Film Picker is an app that solves the problem of boredom and conflict among friends and family on choice of movie. It randomly picks up a movie synopsis which further relates to the title of the movie, rating and the year of release.
 The project was made using HTML, CSS and Javascript using two server API and making them coexist together. 
 
 # Application Requirements
@@ -28,6 +28,25 @@ The project was made using HTML, CSS and Javascript using two server API and mak
     *
 
 # Concept
+This project is a web-based application that allows users to generate and view random film synopsis. Upon clicking the display synopsis button, a random synopsis is generated. To view more about this film, click on synopsis and everything about the film will be displayed in the modal format.
+
+ # Getting Started
+
+Step 1
+
+Registration for an API key in order to use this API.
+
+Step 2
+
+New repository was created by Guilherme Deretti on his account and the rest of the team members clone it to their computer using git clone command.
+
+Step 3
+
+Created index.html file, script file and style css file were created and push up
+
+Step 4
+
+General duties were breakdown and each member were assigned part of the duties. Each of the member worked on the branch and later pull merge request were created. 
 
 
 # Current look of the project
