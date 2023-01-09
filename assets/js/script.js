@@ -17,9 +17,11 @@ function getRandomMovie() {
     $.ajax(settings).done(function (response) {
         console.log(response);
 
-        var movie = response.results[0];
-        fillCards(movie.synopsis, movie.imdbid);
-        localStorage.setItem(movie.imdbid, JSON.stringify(movie));
+        for (var i = 0; i < 3; i++) {
+            var movie = response.results[i];
+            fillCards(movie.synopsis, movie.imdbid);
+            localStorage.setItem(movie.imdbid, JSON.stringify(movie));            
+        }
         // 	-create cards
         // 	-fill cards with random movie
         // 	-text area for "sinopse"
@@ -45,9 +47,9 @@ function fillCards(synopsis, imdbId) {
 $(document).on("click", ".movieCard", function () {     
         var movie = JSON.parse(localStorage.getItem($(this).data("id")));
         $('.modal-title').text(movie.title + " (" + movie.released + ")");
-        $('#modal-image').attr('src', movie.imageurl);
+        $('#modal-image').attr('src', movie.imageurl[0]);
         $('#modal-rating').text("Rating: " + movie.imdbrating);
-        $('#modal-genre').text("Genre: " + movie.genre);
+        $('#modal-genre').text("Genre: " + movie.genre[0]);
         
         // -create modal with (title, image, year, rating, where to watch)
         // -on card click using(dataset imdbID)
