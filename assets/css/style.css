@@ -9,7 +9,7 @@
   background-image: url(../images/movie2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 75vh;
+  height: calc(65vh - 25px);
   display: flex;
   align-items: center;
   justify-content: center;
