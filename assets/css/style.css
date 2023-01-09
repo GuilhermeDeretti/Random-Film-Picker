@@ -60,10 +60,11 @@ color: silver;
 }
 
 .footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
     height: 100px;
+    bottom: 0
 }
 
 .cardContainer a {
@@ -87,7 +88,7 @@ color: silver;
   margin-top: 20px;
 }
 
-.loading > img {
+.loading img {
   width: 70%;
   display: flex;
   justify-content: center;
