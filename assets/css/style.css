@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300;1,400&display=swap'); 
 
+body {
+  height: 100%
+  width: 100%;
+    box-sizing:border-box;
+}
+
 * {
+    /* border: 1px solid red; */
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -61,10 +68,14 @@ color: silver;
 
 .footer {
     position: fixed;
-    bottom: 0;
-    width: 100%;
     height: 100px;
-    bottom: 0
+    bottom: 0;
+    margin-top: 20px;
+    display: inline-flex;
+  }
+
+.footerRow {
+  padding: 0;
 }
 
 .cardContainer a {
@@ -138,18 +149,38 @@ padding-left: 50px;
 font-weight: bolder;
 }
 
-.modalContainer {
+.modalContainer, .synopsisContainer{
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 15px;
 }
 
+.movieCard {
+  margin: 3px;
+}
 .card-header{
   background-color: rgb(51, 52, 53);
   color: silver;
- 
 }
+
+#synopsis {
+  display: flex;
+  max-width: 100%;
+  width: fit-content;
+}
+@media only screen and (max-width: 600px) {
+#synopsis {
+  flex-wrap: wrap;
+}
+}
+
+@media only screen and (max-width: 600px) {
+  .cardContainer, .footerRow {
+    max-width: 320px;
+  }
+  }
 
 .card :hover{
   background-color: silver;

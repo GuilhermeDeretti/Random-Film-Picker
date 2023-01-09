@@ -38,9 +38,10 @@ function fillCards(synopsis, imdbId) {
                 <h4> Synopsis </h4>
             </div>
             <div class="card-body">                    
-                <p>`+ synopsis + `</p>                    
-            </div>
-        </div></a>`
+                <p>`+ synopsis + `</p>   
+                </div> 
+                </div>
+        </a>`
     );
 }
 
