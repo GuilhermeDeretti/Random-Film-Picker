@@ -184,7 +184,7 @@ font-weight: bolder;
 }
 
 @media only screen and (max-width: 600px) {
-  .cardContainer, .footerRow {
+  .cardContainer {
     max-width: 320px;
   }
   }
