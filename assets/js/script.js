@@ -1,12 +1,16 @@
+var apiKey = "009830054dmsh3f54b2b26f2f90ep15938ejsnb252ef03d47c"
+function getRandomNumber(nr) {
+    return Math.floor(Math.random() * nr);
+}
+
 function getRandomMovie() {
-    var randomPage = Math.floor(Math.random() * 50);
     const settings = {
         "async": true,
         "crossDomain": true,
-        "url": "https://ott-details.p.rapidapi.com/advancedsearch?start_year=1970&end_year=2020&min_imdb=6&max_imdb=7.8&genre=action&language=english&type=movie&page=" + randomPage,
+        "url": "https://ott-details.p.rapidapi.com/advancedsearch?start_year=1970&end_year=2020&min_imdb=6&max_imdb=10&language=english&type=movie&sort=lastest&page=" + getRandomNumber(100),
         "method": "GET",
         "headers": {
-            "X-RapidAPI-Key": "009830054dmsh3f54b2b26f2f90ep15938ejsnb252ef03d47c",
+            "X-RapidAPI-Key": apiKey,
             "X-RapidAPI-Host": "ott-details.p.rapidapi.com"
         }
     };
@@ -14,7 +18,7 @@ function getRandomMovie() {
     $.ajax(settings).done(function (response) {
         $('#synopsis').empty();
         for (var i = 0; i < 3; i++) {
-            var movie = response.results[i];
+            var movie = response.results[getRandomNumber(49)];
             fillCards(movie.synopsis, movie.imdbid);
             localStorage.setItem(movie.imdbid, JSON.stringify(movie));
         }
@@ -54,7 +58,7 @@ function getAvailability(imdbId) {
         "method": "GET",
         "headers": {
             "regions": "US",
-            "X-RapidAPI-Key": "830e974347mshf13c1bba5b122b8p13c6bejsn622c0f9f166e",
+            "X-RapidAPI-Key": apiKey,
             "X-RapidAPI-Host": "watchmode.p.rapidapi.com"
         }
     };
