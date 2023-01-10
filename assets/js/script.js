@@ -38,9 +38,10 @@ function fillCards(synopsis, imdbId) {
                 <h4> Synopsis </h4>
             </div>
             <div class="card-body">                    
-                <p>`+ synopsis + `</p>                    
-            </div>
-        </div></a>`
+                <p>`+ synopsis + `</p>   
+                </div> 
+                </div>
+        </a>`
     );
 }
 
@@ -49,7 +50,7 @@ $(document).on("click", ".movieCard", function () {
         $('.modal-title').text(movie.title + " (" + movie.released + ")");
         $('#modal-image').attr('src', movie.imageurl[0]);
         $('#modal-rating').text("Rating: " + movie.imdbrating);
-        $('#modal-genre').text("Genre: " + movie.genre[0]);
+        $('#modal-genre').text("Genre: " + movie.genre);
         
         // -create modal with (title, image, year, rating, where to watch)
         // -on card click using(dataset imdbID)
