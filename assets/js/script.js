@@ -9,7 +9,7 @@ function getRandomMovie() {
         "url": "https://ott-details.p.rapidapi.com/advancedsearch?start_year=1970&end_year=2020&min_imdb=6&max_imdb=7.8&genre=action&language=english&type=movie&page=" + randomPage,
         "method": "GET",
         "headers": {
-            "X-RapidAPI-Key": "53d4430f9bmsh7231787a6b61f06p15a0b7jsna1d2a6fce79c",
+            "X-RapidAPI-Key": "4b0f065569mshd328a2a1a34d744p1e6b38jsnff01d51dcc7e",
             "X-RapidAPI-Host": "ott-details.p.rapidapi.com"
         }
     };
