@@ -19,7 +19,6 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   height: calc(80vh - 25px);
-  /* height: 80vh; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -82,11 +81,12 @@ font-size:16px;
 .footerRow {
   padding: 0;
   background-color: #0c0311;
-  margin-bottom: 20px;
+  margin: 0 auto;
+  flex-wrap: nowrap;
 }
 
 .cardContainer a {
-  color:silver !important;
+  color: silver !important;
 }
 
 .github {
