@@ -16,6 +16,7 @@ function getRandomMovie() {
 
     $.ajax(settings).done(function (response) {
         console.log(response);
+        $('#synopsis').empty();
 
         for (var i = 0; i < 3; i++) {
             var movie = response.results[i];
