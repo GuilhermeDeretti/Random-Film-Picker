@@ -1,22 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300;1,400&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300;1,400&display=swap'); 
 
 body {
-  height: 100%
+  height: 100%;
   width: 100%;
-    box-sizing:border-box;
+  box-sizing:border-box;
+  background-color: #0c0311;
 }
 
 * {
     /* border: 1px solid red; */
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Header */
 .jumbotron {
-  background-image: url(../images/movie2.jpg);
+  background-image: url(../images/purpleMovieReelCrop.jpg);
+  box-shadow: inset 0 0 0 2000px rgba(6, 6, 6, 0.655);
   background-size: cover;
   background-repeat: no-repeat;
-  height: calc(65vh - 25px);
+  height: calc(80vh - 25px);
+  /* height: 80vh; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,14 +30,15 @@ body {
 .jumboTitle {
   display: flex;
   justify-content: center;
-  font-size: 45px;
+  font-size: 32px;
   font-weight: bolder;
-  color: silver;
+  color: whitesmoke;
 }
 
 .descriptionText {
 text-align: center;
-color: silver;
+color: whitesmoke;
+font-size:16px;
 }
 
 /* Landing page */
@@ -53,16 +57,17 @@ color: silver;
 }
 
 .btn-primary {
-  background-color:transparent !important;
+  background-color:#4c0359 !important;
   float:left ;
-  color: black;
-  border-color: black;
+  color: whitesmoke;
+  border-color: whitesmoke;
 
 }
 
 .btn-primary:hover{
-  color: black !important;
-  background-color: seashell !important;
+  color: whitesmoke !important;
+  background-color: fuchsia !important;
+  border-color: whitesmoke;
   
 }
 
@@ -76,6 +81,8 @@ color: silver;
 
 .footerRow {
   padding: 0;
+  background-color: #0c0311;
+  margin-bottom: 20px;
 }
 
 .cardContainer a {
