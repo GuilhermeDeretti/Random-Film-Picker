@@ -41,6 +41,7 @@ function fillCards(synopsis, imdbId) {
     );
 }
 
+//load stored data from the OTT API to the modal following a call to watchmode API
 $(document).on("click", ".movieCard", function () {
     var movie = JSON.parse(localStorage.getItem($(this).data("id")));
     $('.modal-title').text(movie.title + " (" + movie.released + ")");
@@ -50,6 +51,7 @@ $(document).on("click", ".movieCard", function () {
     getAvailability($(this).data("id"));
 });
 
+//watchmode API using imdb id to find the sources to watch the movie
 function getAvailability(imdbId) {
     const settings = {
         "async": true,
@@ -65,9 +67,19 @@ function getAvailability(imdbId) {
 
     $.ajax(settings).done(function (response) {
         console.log(response);
-        $('#modal-availability').text("Available at: " + response[0].name);
+        if(response.length == 0){
+            $('#modal-availability').text("We couldn't find a source for this movie in our database");                        
+        }else{
+            $('#modal-availability').text("Available at: " + response[0].name);
+        }        
+    })
+    .fail(function (xhr, status, error) {
+        // Handle any errors
+        $('#modal-availability').text("Internal error Ask IT to change the API key");
     });
 }
+
+//API Loading Image
 $('.synopsisDisplay').click(function (event) {
     event.preventDefault();
     getRandomMovie();
