@@ -9,7 +9,7 @@ function getRandomMovie() {
     const settings = {
         "async": true,
         "crossDomain": true,
-        "url": "https://ott-details.p.rapidapi.com/advancedsearch?start_year=1970&end_year=2020&min_imdb=6&max_imdb=10&language=english&type=movie&sort=lastest&page=" + getRandomNumber(100),
+        "url": "https://ott-details.p.rapidapi.com/advancedsearch?start_year=2000&end_year=2020&min_imdb=6&max_imdb=10&language=english&type=movie&sort=lastest&page=" + getRandomNumber(100),
         "method": "GET",
         "headers": {
             "X-RapidAPI-Key": apiKey,
@@ -18,6 +18,7 @@ function getRandomMovie() {
     };
 
     $.ajax(settings).done(function (response) {
+        console.log(response);
         $('#synopsis').empty();
         for (var i = 0; i < 3; i++) {
             var movie = response.results[getRandomNumber(49)];
@@ -67,19 +68,21 @@ function getAvailability(imdbId) {
             "X-RapidAPI-Host": "watchmode.p.rapidapi.com"
         }
     };
-
+    $("#modal-availability").empty();
+    var sourceEl = $("<p>");    
     $.ajax(settings).done(function (response) {
-        console.log(response);
-        if(response.length == 0){
-            $('#modal-availability').text("We couldn't find a source for this movie in our database");                        
-        }else{
-            $('#modal-availability').text(response[0].name +" for "+ response[0].type);
+        console.log(response);        
+        if(response.length < 2){
+            sourceEl.text("We couldn't find a source for this movie in our database");                        
+        }else{            
+            sourceEl.text(response[0].name +" to "+ response[0].type);            
         }        
     })
     .fail(function (xhr, status, error) {
         // Handle any errors
-        $('#modal-availability').text("Internal error Ask IT to change the API key");
+        sourceEl.text("Internal error Ask IT to change the API key");
     });
+    $("#modal-availability").append(sourceEl);
 }
 
 //API Loading Image
