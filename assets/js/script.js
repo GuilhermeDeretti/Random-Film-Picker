@@ -20,11 +20,17 @@ function getRandomMovie() {
     $.ajax(settings).done(function (response) {
         console.log(response);
         $('#synopsis').empty();
-        for (var i = 0; i < 3; i++) {
-            var movie = response.results[getRandomNumber(49)];
-            fillCards(movie.synopsis, movie.imdbid);
-            localStorage.setItem(movie.imdbid, JSON.stringify(movie));
-        }
+        var moviesAdded = [];
+        do {
+            var toAdd = getRandomNumber(49);
+            //check array to make sure we don't add a repeated movie and check if there is synopsis
+            if(!moviesAdded.includes(toAdd) && !(response.synopsis === "")){
+                moviesAdded.push(toAdd)
+                var movie = response.results[toAdd];
+                fillCards(movie.synopsis, movie.imdbid);
+                localStorage.setItem(movie.imdbid, JSON.stringify(movie));
+            }
+        }while (moviesAdded.length < 3);
     });
 }
 
@@ -72,7 +78,7 @@ function getAvailability(imdbId) {
     var sourceEl = $("<p>");    
     $.ajax(settings).done(function (response) {
         console.log(response);        
-        if(response.length < 2){
+        if(response.length == 0 || !Array.isArray(response)){
             sourceEl.text("We couldn't find a source for this movie in our database");                        
         }else{            
             sourceEl.text(response[0].name +" to "+ response[0].type);            
