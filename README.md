@@ -58,7 +58,7 @@ General duties were breakdown and each member were assigned part of the duties. 
 ![upon clicking Pick Film](./assets/images/clickingpickfilm.png)
 
 
-![Clicking Synopsis](./assets/images/modal.png)
+![Clicking Synopsis](./assets/images/Modal2.png)
 
 # Links to the project
 
