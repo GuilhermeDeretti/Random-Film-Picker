@@ -1,13 +1,15 @@
 var apiKey = "009830054dmsh3f54b2b26f2f90ep15938ejsnb252ef03d47c"
+
 function getRandomNumber(nr) {
     return Math.floor(Math.random() * nr);
 }
 
+//Get random movies from the OTT API
 function getRandomMovie() {
     const settings = {
         "async": true,
         "crossDomain": true,
-        "url": "https://ott-details.p.rapidapi.com/advancedsearch?start_year=1970&end_year=2020&min_imdb=6&max_imdb=10&language=english&type=movie&sort=lastest&page=" + getRandomNumber(100),
+        "url": "https://ott-details.p.rapidapi.com/advancedsearch?start_year=2000&end_year=2020&min_imdb=6&max_imdb=10&language=english&type=movie&sort=lastest&page=" + getRandomNumber(100),
         "method": "GET",
         "headers": {
             "X-RapidAPI-Key": apiKey,
@@ -16,6 +18,7 @@ function getRandomMovie() {
     };
 
     $.ajax(settings).done(function (response) {
+        console.log(response);
         $('#synopsis').empty();
         for (var i = 0; i < 3; i++) {
             var movie = response.results[getRandomNumber(49)];
@@ -25,6 +28,7 @@ function getRandomMovie() {
     });
 }
 
+//show the Synopsis to the user
 function fillCards(synopsis, imdbId) {
     var synopsisEl = $('#synopsis');
     synopsisEl.append(
@@ -41,7 +45,7 @@ function fillCards(synopsis, imdbId) {
     );
 }
 
-//load stored data from the OTT API to the modal following a call to watchmode API
+//when click on the container load stored data from the OTT API to the modal following a call to watchmode API
 $(document).on("click", ".movieCard", function () {
     var movie = JSON.parse(localStorage.getItem($(this).data("id")));
     $('.modal-title').text(movie.title + " (" + movie.released + ")");
@@ -51,7 +55,7 @@ $(document).on("click", ".movieCard", function () {
     getAvailability($(this).data("id"));
 });
 
-//watchmode API using imdb id to find the sources to watch the movie
+//call watchmode API using imdb id to find the sources to watch the movie
 function getAvailability(imdbId) {
     const settings = {
         "async": true,
@@ -64,19 +68,21 @@ function getAvailability(imdbId) {
             "X-RapidAPI-Host": "watchmode.p.rapidapi.com"
         }
     };
-
+    $("#modal-availability").empty();
+    var sourceEl = $("<p>");    
     $.ajax(settings).done(function (response) {
-        console.log(response);
-        if(response.length == 0){
-            $('#modal-availability').text("We couldn't find a source for this movie in our database");                        
-        }else{
-            $('#modal-availability').text(response[0].name);
+        console.log(response);        
+        if(response.length < 2){
+            sourceEl.text("We couldn't find a source for this movie in our database");                        
+        }else{            
+            sourceEl.text(response[0].name +" to "+ response[0].type);            
         }        
     })
     .fail(function (xhr, status, error) {
         // Handle any errors
-        $('#modal-availability').text("Internal error Ask IT to change the API key");
+        sourceEl.text("Internal error Ask IT to change the API key");
     });
+    $("#modal-availability").append(sourceEl);
 }
 
 //API Loading Image
