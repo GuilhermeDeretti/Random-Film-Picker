@@ -23,12 +23,12 @@ The project was made using HTML, CSS and Javascript using two server API and mak
 
 # THe Two API used are:
 
-    *
+    * [OTT](https://rapidapi.com/gox-ai-gox-ai-default/api/ott-details)
 
-    *
+    *  [Watch Mode](https://watchmode.p.rapidapi.com)
 
 # Concept
-This project is a web-based application that allows users to generate and view random film synopsis. Upon clicking the display synopsis button, a random synopsis is generated. To view more about this film, click on synopsis and everything about the film will be displayed in the modal format.
+This project is a web-based application that allows users to generate and view random film synopsis. Upon clicking the Pick Film button, a random synopsis is generated. To view more about this film, click on synopsis and everything about the film will be displayed in the modal format.
 
  # Getting Started
 
@@ -51,12 +51,23 @@ General duties were breakdown and each member were assigned part of the duties. 
 
 # Current look of the project
 
+    * ![On Loading](./assets/images/onload.png)
+
+
+    * ![upon clicking Pick Film](./assets/images/clickingpickfilm.png)
+
+
+    * ![Clicking Synopsis](./assets/images/modal.png)
+
+
+
+
 
 # Links to the project
 
-    * Deployment Link
+    * [Deployment Link](https://guilhermederetti.github.io/Random-Film-Picker/)
 
-    * Github Link
+    * [Github Link](https://guilhermederetti.github.io/Random-Film-Picker/)
 
 
 # Team Members:
@@ -69,6 +80,8 @@ General duties were breakdown and each member were assigned part of the duties. 
 # Challenges
 
     * Main challenge was to find API that worked well together. Our original idea was to look up continents and pick random city and then produce meal and recipe of that country.
+
+    * API quota running out
 
     * Github conflicts.
 
