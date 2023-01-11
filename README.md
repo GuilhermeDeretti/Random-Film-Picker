@@ -55,7 +55,7 @@ General duties were breakdown and each member were assigned part of the duties. 
 ![On Loading](./assets/images/onload.png)
 
 
-![upon clicking Pick Film](./assets/images/clickingpickfilm.png)
+![upon clicking Pick Film](./assets/images/synopsis.png)
 
 
 ![Clicking Synopsis](./assets/images/Modal2.png)
