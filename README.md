@@ -1,7 +1,7 @@
 # Random Film Picker
 
-Random Film Picker is an app that solves the problem of boredom and conflict among friends and family on choice of movie. It randomly picks up a movie synopsis which further relates to the title of the movie, rating and the year of release.
-The project was made using HTML, CSS and Javascript using two server API and making them coexist together. 
+This application provides a convenient and efficient way for movie enthusiasts to discover new films. Users can view synopses of three random movies at a time, and upon selecting one, they will be presented with more in-depth information including the movie's cover, streaming availability, and a detailed description of the plot. The application is designed to be user-friendly, and an intuitive search bar allows users to find specific movies they are interested in.
+
 
 # Application Requirements
 
@@ -21,14 +21,25 @@ The project was made using HTML, CSS and Javascript using two server API and mak
 
     * Have a polished UI.
 
-# THe Two API used are:
+# User Story
 
-    * [OTT](https://rapidapi.com/gox-ai-gox-ai-default/api/ott-details)
+As a movie lover, I want to have an easy and efficient way to discover new films. I want to see short summaries of different movies so that I can quickly decide which ones I may want to watch. When I see a movie summary that interests me, I want to be able to see more information about it, including its cover, streaming availability, and a detailed plot description.
 
-    *  [Watch Mode](https://watchmode.p.rapidapi.com)
 
-# Concept
-This project is a web-based application that allows users to generate and view random film synopsis. Upon clicking the Pick Film button, a random synopsis is generated. To view more about this film, click on synopsis and everything about the film will be displayed in the modal format.
+# Technologies Used
+
+Js Query: Used for DOM manipulation and handling events
+Ajax: Used for making API calls to retrieve movie data asynchronously
+Bootstrap 4: Used for styling and responsive layout
+CSS: Used for custom styling to enhance user interface
+
+
+
+# The Two API used are:
+
+     [OTT](https://rapidapi.com/gox-ai-gox-ai-default/api/ott-details)
+
+     [Watch Mode](https://watchmode.p.rapidapi.com)
 
  # Getting Started
 
@@ -51,13 +62,13 @@ General duties were breakdown and each member were assigned part of the duties. 
 
 # Current look of the project
 
-    * ![On Loading](./assets/images/onload.png)
+    ![On Loading](./assets/images/onload.png)
 
 
-    * ![upon clicking Pick Film](./assets/images/clickingpickfilm.png)
+    ![upon clicking Pick Film](./assets/images/clickingpickfilm.png)
 
 
-    * ![Clicking Synopsis](./assets/images/modal.png)
+    ![Clicking Synopsis](./assets/images/modal.png)
 
 
 
@@ -65,9 +76,9 @@ General duties were breakdown and each member were assigned part of the duties. 
 
 # Links to the project
 
-    * [Deployment Link](https://guilhermederetti.github.io/Random-Film-Picker/)
+     [Deployment Link](https://guilhermederetti.github.io/Random-Film-Picker/)
 
-    * [Github Link](https://guilhermederetti.github.io/Random-Film-Picker/)
+     [Github Link](https://guilhermederetti.github.io/Random-Film-Picker/)
 
 
 # Team Members:
