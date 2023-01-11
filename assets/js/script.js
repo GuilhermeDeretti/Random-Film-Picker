@@ -70,7 +70,7 @@ function getAvailability(imdbId) {
         if(response.length == 0){
             $('#modal-availability').text("We couldn't find a source for this movie in our database");                        
         }else{
-            $('#modal-availability').text("Available at: " + response[0].name);
+            $('#modal-availability').text(response[0].name);
         }        
     })
     .fail(function (xhr, status, error) {
