@@ -64,7 +64,7 @@ General duties were breakdown and each member were assigned part of the duties. 
 
 [Deployment Link](https://guilhermederetti.github.io/Random-Film-Picker/)
 
-[Github Link](https://guilhermederetti.github.io/Random-Film-Picker/)
+[Github Link](https://github.com/GuilhermeDeretti/Random-Film-Picker/)
 
 
 # Team Members:
