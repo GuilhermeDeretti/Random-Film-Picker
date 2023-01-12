@@ -29,7 +29,7 @@ CSS: Used for custom styling to enhance user interface
 
 [OTT](https://rapidapi.com/gox-ai-gox-ai-default/api/ott-details)
 
-[Watch Mode](https://watchmode.p.rapidapi.com)
+[Watch Mode](https://rapidapi.com/meteoric-llc-meteoric-llc-default/api/watchmode)
 
 # Getting Started
 
